@@ -635,7 +635,7 @@ export default {
     async fetchReportTypes() {
       this.loadingReportTypes = true;
       try {
-        const res = await fetch('http://localhost:8080/sisden/api/report-type');
+        const res = await fetch('https://30ad-41-220-200-222.ngrok-free.app/sisden/api/report-type');
         this.reportTypes = await res.json();
       } catch (e) {
         this.$toast && this.$toast.error('Erro ao carregar tipos de denúncia');
@@ -646,7 +646,7 @@ export default {
     async fetchInstitutions() {
       this.loadingInstitutions = true;
       try {
-        const res = await fetch('http://localhost:8080/sisden/api/instituitions');
+        const res = await fetch('https://30ad-41-220-200-222.ngrok-free.app/sisden/api/instituitions');
         this.institutions = await res.json();
       } catch (e) {
         this.$toast && this.$toast.error('Erro ao carregar instituições');
@@ -657,7 +657,7 @@ export default {
     async fetchClassifications() {
       this.loadingClassifications = true;
       try {
-        const res = await fetch('http://localhost:8080/sisden/api/report-classification');
+        const res = await fetch('https://30ad-41-220-200-222.ngrok-free.app/sisden/api/report-classification');
         this.classifications = await res.json();
       } catch (e) {
         this.$toast && this.$toast.error('Erro ao carregar classificações');
@@ -668,7 +668,7 @@ export default {
     async fetchReportTypesByInstituition(instituitionId) {
       this.loadingReportTypes = true;
       try {
-        const res = await fetch(`http://localhost:8080/sisden/api/report-type/instituition/${instituitionId}`);
+        const res = await fetch(`https://30ad-41-220-200-222.ngrok-free.app/sisden/api/report-type/instituition/${instituitionId}`);
         this.reportTypes = await res.json();
       } catch (e) {
         this.$toast && this.$toast.error('Erro ao carregar tipos de denúncia para a instituição');
@@ -717,7 +717,7 @@ export default {
           }
         };
 
-        const response = await fetch('http://localhost:8080/sisden/api/reports', {
+        const response = await fetch('https://30ad-41-220-200-222.ngrok-free.app/sisden/api/reports', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
